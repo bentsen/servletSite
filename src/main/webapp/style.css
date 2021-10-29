@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body{
+    font-family: "poppins";
+    margin: 0;
+    background-image: url("background.png");
+}
+
+#loginHeader{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#loginUnderHeader{
+    color: #8c9094;
+    font-size: 15px;
+}
+
+.box{
+    width: 400px;
+    height: 370px;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5em;
+    background: #2c2f33;
+    border-radius: 0.2em;
+}
+
+input[type="submit"]{
+    background-color: #7289DA;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 1em;
+    border: none;
+    display: inline-block;
+    padding: 0.7em 2em;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 0.7em;
+    margin-top: 0.5em;
+    border-radius: 0.2em;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    background-color: #23272a;
+    font-size: 1em;
+    color: white;
+}
+
+label{
+    float: left;
+    margin-top: 1.5em;
+    display: block;
+    font-size: 0.8em;
+    color: #aaaeaf;
+}
+
+.contactUs{
+    font-size: 10.2px;
+    color: #5865f2;
+    position: absolute;
+    margin-left: 5.2em;
+}
+.newUser{
+    color: #8c9094;
+    font-size: 10.2px;
+}
+
+.needhelp{
+    display: flex;
+    align-items: center;
+}
+
+.wrongUsername{
+    color: #EA3B4E;
+    font-size: 10.2px;
+    position: absolute;
+    margin-left: 7.2em;
+    margin-top: 3em;
+    visibility: hidden;
+}
+
+.lort{
+    display: flex;
+    align-items: center;
+}
+
+.wrongPassword{
+    color: #EA3B4E;
+    font-size: 10.2px;
+    position: absolute;
+    margin-left: 7em;
+    margin-top: 3em;
+    visibility: hidden;
+}
