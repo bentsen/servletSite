@@ -19,17 +19,18 @@ public class LoginServlet extends HttpServlet
 
         String pass1 = request.getParameter("pass1");
         String inputNavn = request.getParameter("name");
+        DB db = new DB();
+        List<Bruger> brugerList = (List<Bruger>) context.getAttribute("brugerList");
 
-        List<Bruger> brugerList = (List<Bruger>) context.getAttribute("brugerliste");
         if(brugerList == null)
         {
             brugerList = new ArrayList<>();
+            brugerList = db.receive();
         }
         for (Bruger bruger : brugerList) {
 
             if(bruger.getName().equals(inputNavn) && bruger.getPassword().equals(pass1))
             {
-                System.out.println("du er inde");
                 session.setAttribute("bruger", bruger);
                 session.setAttribute("emneListe", bruger.getBrugerHuskeliste());
 

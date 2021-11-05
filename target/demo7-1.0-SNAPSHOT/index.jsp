@@ -1,4 +1,8 @@
+<%@ page import="com.example.demo7.DB" %>
+<%@ page import="com.example.demo7.Bruger" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,5 +1,6 @@
 package com.example.demo7;
 
+import java.util.List;
 import java.util.Set;
 
 public class Bruger
@@ -8,6 +9,7 @@ public class Bruger
     String password;
 
     Set<String> brugerHuskeliste;
+    List<Bruger> brugerList;
 
     public Bruger(String name, String password)
     {
@@ -29,5 +31,13 @@ public class Bruger
 
     public void setBrugerHuskeliste(Set<String> brugerHuskeliste) {
         this.brugerHuskeliste = brugerHuskeliste;
+    }
+
+    public List<Bruger> getBrugerList() {
+        return brugerList;
+    }
+
+    public void setBrugerList(List<Bruger> brugerList) {
+        this.brugerList = brugerList;
     }
 }

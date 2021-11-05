@@ -8,15 +8,17 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Bruger siden</title>
+    <link rel="stylesheet" href="style2.css" type="text/css">
 </head>
 <body>
 
 <h1>Velkomme til brugersiden <%=request.getAttribute("name")%> du er logget ind som ${sessionScope.navn}</h1>
 
-her kan du oprette emner til din huske sedel;
+her kan du oprette emner til din huske sedel
 
 
 

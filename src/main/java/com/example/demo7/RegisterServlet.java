@@ -25,7 +25,7 @@ public class RegisterServlet extends HttpServlet
         String name = request.getParameter("name");
         String password = request.getParameter("pass1");
 
-        List<Bruger> brugerList = (List<Bruger>) context.getAttribute("brugerliste");
+        List<Bruger> brugerList = (List<Bruger>) context.getAttribute("brugerList");
 
         if(brugerList == null)
         {
@@ -35,15 +35,22 @@ public class RegisterServlet extends HttpServlet
         Bruger bruger = new Bruger(name,password);
 
         brugerList.add(bruger);
+        DB db = new DB();
+        String result = db.insert(bruger);
+        System.out.println(result);
 
 
-
-        context.setAttribute("brugerliste", brugerList);
+        context.setAttribute("brugerList", brugerList);
         session.setAttribute("bruger",bruger);
 
         String sessionid = session.getId();
         session.setAttribute("name",name);
         session.setAttribute("sessionid",sessionid);
+
+        for(int i = 0; i < brugerList.size();i++)
+        {
+            System.out.println(brugerList.get(i).getName());
+        }
 
         request.setAttribute("name", name);
         request.getRequestDispatcher("index.jsp").forward(request,response);
