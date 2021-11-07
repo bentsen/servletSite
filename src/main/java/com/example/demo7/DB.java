@@ -9,9 +9,9 @@ import java.util.Set;
 
 public class DB
 {
-    private final static String dburl = "jdbc:mysql://localhost:3306/lort?serverTimezone=CET";
-    private final static String dbuname = "root";
-    private final static String dbpassword = "mikkel405";
+    private final static String dburl = "jdbc:mysql://164.90.177.28:3306/huskeliste?serverTimezone=CET";
+    private final static String dbuname = "mikkel";
+    private final static String dbpassword = "Mikkel405!";
     private final static String dbdriver = "com.mysql.cj.jdbc.Driver";
 
     public void loadDriver(String dbdriver)
@@ -46,7 +46,7 @@ public class DB
         loadDriver(dbdriver);
         Connection con = getConnection();
         String result = "data entered succesfully";
-        String sql = "insert into lort.User values(?,?)";
+        String sql = "insert into huskeliste.User values(?,?)";
         try
         {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -77,7 +77,7 @@ public class DB
         {
             e.printStackTrace();
         }
-        String sql = " SELECT * FROM lort.User";
+        String sql = " SELECT * FROM huskeliste.User";
         try
         {
             ResultSet rs = stmt.executeQuery(sql);

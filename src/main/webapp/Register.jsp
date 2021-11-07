@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Register-Site</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class = "box">
